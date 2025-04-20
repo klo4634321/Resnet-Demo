@@ -7,6 +7,11 @@
 
 **本程式碼僅作為自我練習用途，並未經藝術家同意使用其插圖，因此只提供數據，並不附上任何圖像。**
 
+<img src="https://img.shields.io/badge/Python-3.10-blue.svg?logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=pytorch&logoColor=white" alt="PyTorch">
+<img src="https://img.shields.io/badge/ResNet18-%23000000.svg?logo=code&logoColor=white" alt="ResNet18">
+<img src="https://img.shields.io/badge/Pixiv_Style_Classifier-%232F88F6.svg?logo=pixiv&logoColor=white" alt="Pixiv Style Classifier">
+            
 
 ## **文件說明**
 
