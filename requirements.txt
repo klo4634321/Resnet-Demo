@@ -2,3 +2,6 @@ Pillow
 torch
 tensorboard
 torchvision
+fastapi
+uvicorn
+python-multipart
