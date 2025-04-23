@@ -20,7 +20,7 @@ img_path = "test_img.jpg"
 transform = transforms.Compose([
     transforms.Resize((224, 224)),  # 和訓練一樣
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  # 正規化
 ])
 
 image = Image.open(img_path).convert("RGB")
@@ -32,5 +32,5 @@ with torch.no_grad():
     _, predicted = torch.max(output, 1)
 
 # 5. 顯示結果
-class_names = ["pixiv_artist_57824462", "pixiv_artist_48631"]  # 根據你的順序調整
-print(f"這張圖片預測為：{class_names[predicted.item()]}")
+class_names = ["pixiv_artist_48631", "pixiv_artist_57824462"]  # 根據你的順序調整
+print(f"這張圖片預測為：{class_names[predicted.item()]}, 機率：{torch.nn.functional.softmax(output, dim=1)[0][predicted.item()].item():.4f}")
