@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Class names (replace with your actual class names)
-CLASS_NAMES = ["class0", "class1"]  # Modify with your actual class names
+CLASS_NAMES = ["pixiv_artist_48631", "pixiv_artist_57824462"]  # Modify with your actual class names
 
 # Device configuration
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -37,7 +37,7 @@ except Exception as e:
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
 @app.get("/")
